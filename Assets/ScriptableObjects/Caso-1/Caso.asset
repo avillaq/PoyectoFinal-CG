@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1837a090c56f9244b39e08eb3ea4e40, type: 3}
+  m_Name: Caso
+  m_EditorClassIdentifier: Assembly-CSharp::DatosCaso
+  tituloCaso: <b>CASO 1</b>
+  descripcionCaso: Durante el recreo, el celular de Diego desaparecio. Tres personas
+    dieron su testimonio sobre lo ocurrido.
+  testigos:
+  - {fileID: 11400000, guid: b4876182715717c4a97e60da00e9005f, type: 2}
+  - {fileID: 11400000, guid: 50087d116dbf63d47b774394c7598ada, type: 2}
+  - {fileID: 11400000, guid: d306fa8b9b7ef504d95a4fe7ea4c8144, type: 2}
