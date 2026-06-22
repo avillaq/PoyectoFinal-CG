@@ -19,3 +19,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b4876182715717c4a97e60da00e9005f, type: 2}
   - {fileID: 11400000, guid: 50087d116dbf63d47b774394c7598ada, type: 2}
   - {fileID: 11400000, guid: d306fa8b9b7ef504d95a4fe7ea4c8144, type: 2}
+  tituloMinijuego: MINIJUEGO #3
+  nombreMinijuego: "Selecci\xF3n de pistas importantes"
+  descripcionMinijuego: "Durante el recreo, el celular de Diego desapareci\xF3.\n\nAnaliza
+    las pistas encontradas y selecciona las tarjetas  que pueden ayudar a resolver
+    el caso."

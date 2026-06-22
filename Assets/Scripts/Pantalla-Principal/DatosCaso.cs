@@ -11,4 +11,10 @@ public class DatosCaso : ScriptableObject
 
     [Header("Testigos del Caso")]
     public List<DatosTestigo> testigos = new List<DatosTestigo>();
+
+    [Header("Datos del Minijuego de Resolución")]
+    public string tituloMinijuego;
+    public string nombreMinijuego;
+    [TextArea(5, 10)]
+    public string descripcionMinijuego;
 }

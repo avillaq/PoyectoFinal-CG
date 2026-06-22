@@ -10,6 +10,9 @@ public class NavegacionPrincipal : MonoBehaviour
     [Tooltip("El GameObject del panel de configuración, si se encuentra en la misma escena.")]
     [SerializeField] private GameObject panelConfiguracion;
 
+    [Tooltip("El GameObject del panel de la pantalla principal (testigos), para poder ocultarlo/mostrarlo.")]
+    [SerializeField] private GameObject panelPantallaPrincipal;
+
     [Tooltip("El GameObject del panel del minijuego para resolver el caso, si se encuentra en la misma escena.")]
     [SerializeField] private GameObject panelMinijuego;
 
@@ -20,12 +23,34 @@ public class NavegacionPrincipal : MonoBehaviour
     {
         if (panelMinijuego != null)
         {
+            if (panelPantallaPrincipal != null)
+            {
+                panelPantallaPrincipal.SetActive(false);
+            }
             panelMinijuego.SetActive(true);
-            Debug.Log("ResolverCaso: Panel de minijuego activado en la misma escena.");
         }
         else
         {
             Debug.LogWarning("NavegacionPrincipal: No se ha asignado la referencia del Panel de Minijuego. Simulando acción...");
+        }
+    }
+
+    /// <summary>
+    /// Evento disparado para volver a la pantalla principal de testimonios desde el minijuego.
+    /// </summary>
+    public void VolverATestimonios()
+    {
+        if (panelMinijuego != null)
+        {
+            panelMinijuego.SetActive(false);
+        }
+        if (panelPantallaPrincipal != null)
+        {
+            panelPantallaPrincipal.SetActive(true);
+        }
+        else
+        {
+            Debug.LogWarning("NavegacionPrincipal: No se ha asignado la referencia del Panel de Pantalla Principal.");
         }
     }
 
@@ -64,7 +89,6 @@ public class NavegacionPrincipal : MonoBehaviour
         if (panelConfiguracion != null)
         {
             panelConfiguracion.SetActive(true);
-            Debug.Log("AbrirConfiguracion: Panel de configuración abierto.");
         }
         else
         {
@@ -80,7 +104,6 @@ public class NavegacionPrincipal : MonoBehaviour
         if (panelConfiguracion != null)
         {
             panelConfiguracion.SetActive(false);
-            Debug.Log("CerrarConfiguracion: Panel de configuración cerrado.");
         }
     }
 }
