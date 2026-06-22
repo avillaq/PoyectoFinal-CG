@@ -75,9 +75,9 @@ public class ControladorTestigos : MonoBehaviour
         // Actualizar foto
         if (imagenFoto != null)
         {
-            if (testigo.fotoTestigo != null)
+            if (testigo.fotoTarjeta != null)
             {
-                imagenFoto.sprite = testigo.fotoTestigo;
+                imagenFoto.sprite = testigo.fotoTarjeta;
                 imagenFoto.gameObject.SetActive(true);
             }
             else

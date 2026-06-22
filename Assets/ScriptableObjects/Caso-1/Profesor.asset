@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DatosTestigo
   nombreTestigo: Profesor Morales
   rolTestigo: Docente
-  fotoTestigo: {fileID: 21300000, guid: 82b95bcd79c38554783e6b5d4c75b91b, type: 3}
+  fotoTarjeta: {fileID: 21300000, guid: 82b95bcd79c38554783e6b5d4c75b91b, type: 3}
+  fotoRetrato: {fileID: 21300000, guid: 4df6657e57204e341959dc57be04dc67, type: 3}
+  fotoDetalle: {fileID: 21300000, guid: 82b95bcd79c38554783e6b5d4c75b91b, type: 3}
   textoTestimonio: "Cuando llegu\xE9 al sal\xF3n despu\xE9s del recreo, <b> vi a
     Diego revisando sus cosas muy preocupado. </b> \n\nLuego varios estudiantes comenzaron
     a ayudarlo."
+  textoTestimonioDetalle: "\u201CRegrese al laboratorio. El aula estaba vacia, pero
+    la ventana del pasillo quedo abierta y habia una mochila verde sobre una silla.\u201D"

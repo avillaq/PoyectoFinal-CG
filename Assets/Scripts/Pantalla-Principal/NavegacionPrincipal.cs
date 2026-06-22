@@ -10,15 +10,23 @@ public class NavegacionPrincipal : MonoBehaviour
     [Tooltip("El GameObject del panel de configuración, si se encuentra en la misma escena.")]
     [SerializeField] private GameObject panelConfiguracion;
 
+    [Tooltip("El GameObject del panel del minijuego para resolver el caso, si se encuentra en la misma escena.")]
+    [SerializeField] private GameObject panelMinijuego;
+
     /// <summary>
     /// Evento disparado al presionar el botón "Resolver el caso".
     /// </summary>
     public void ResolverCaso()
     {
-        Debug.Log("ResolverCaso: Se ha iniciado la resolución del caso.");
-        // TODO: Cargar la escena de resolución o mostrar panel de culpables.
-        // Ejemplo de cambio de escena:
-        // SceneManager.LoadScene("ResolucionCasoScene");
+        if (panelMinijuego != null)
+        {
+            panelMinijuego.SetActive(true);
+            Debug.Log("ResolverCaso: Panel de minijuego activado en la misma escena.");
+        }
+        else
+        {
+            Debug.LogWarning("NavegacionPrincipal: No se ha asignado la referencia del Panel de Minijuego. Simulando acción...");
+        }
     }
 
     /// <summary>
@@ -28,15 +36,23 @@ public class NavegacionPrincipal : MonoBehaviour
     {
         if (panelMenuEmergente != null)
         {
-            bool estaActivo = panelMenuEmergente.activeSelf;
-            panelMenuEmergente.SetActive(!estaActivo);
-            Debug.Log($"AlternarMenuEmergente: Menú emergente {( !estaActivo ? "Abierto" : "Cerrado" )}.");
+            // Intentar obtener el controlador de deslizamiento animado para una transición suave
+            MenuEmergenteController controlador = panelMenuEmergente.GetComponent<MenuEmergenteController>();
+            if (controlador != null)
+            {
+                controlador.CambiarEstadoMenu();
+            }
+            else
+            {
+                // Si no hay controlador de animación, alternamos visibilidad directa (fallback)
+                bool estaActivo = panelMenuEmergente.activeSelf;
+                panelMenuEmergente.SetActive(!estaActivo);
+                Debug.Log($"AlternarMenuEmergente: Menú emergente {( !estaActivo ? "Abierto" : "Cerrado" )} (visibilidad directa).");
+            }
         }
         else
         {
-            Debug.LogWarning("NavegacionPrincipal: No se ha asignado la referencia del Panel del Menú Emergente. Cargando escena o simulando...");
-            // Si el menú emergente estuviera en otra escena aditiva:
-            // SceneManager.LoadScene("MenuEmergenteScene", LoadSceneMode.Additive);
+            Debug.LogWarning("NavegacionPrincipal: No se ha asignado la referencia del Panel del Menú Emergente.");
         }
     }
 

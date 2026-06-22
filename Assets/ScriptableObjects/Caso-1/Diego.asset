@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DatosTestigo
   nombreTestigo: Diego Ramirez
   rolTestigo: Estudiante
-  fotoTestigo: {fileID: 21300000, guid: dbd7f6ec7ea348c4f8fc10c5a5f8510c, type: 3}
+  fotoTarjeta: {fileID: 21300000, guid: dbd7f6ec7ea348c4f8fc10c5a5f8510c, type: 3}
+  fotoRetrato: {fileID: 21300000, guid: ebbd1102298d9bf41903342d8bf89dda, type: 3}
+  fotoDetalle: {fileID: 21300000, guid: dbd7f6ec7ea348c4f8fc10c5a5f8510c, type: 3}
   textoTestimonio: "Antes de salir al recreo, dej\xE9 mi celular sobre mi mesa. \n\n
     <b>Cuando regres\xE9 al sal\xF3n, ya no estaba.</b> "
+  textoTestimonioDetalle: "\u201CDeje mi celular sobre la mesa del laboratorio durante
+    el recreo. Regrese y la puerta estaba entreabierta. Mi celular  ya no estaba.\u201D"
